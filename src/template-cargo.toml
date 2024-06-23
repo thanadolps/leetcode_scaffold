@@ -1,0 +1,7 @@
+[dependencies]
+firedbg-lib = { workspace = true }
+test-case = { workspace = true }
+
+[dev-dependencies]
+bolero = { workspace = true }
+proptest = { workspace = true }
