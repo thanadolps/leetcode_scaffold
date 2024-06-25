@@ -84,6 +84,6 @@ fn generate_testcase(example: &Example) -> String {
     if let Some(explanation) = example.explanation {
         writeln!(out, "    // {explanation}").expect("write to string never fail");
     }
-    write!(out, "    #[test_case({items}; {name})]").expect("write to string never fail");
+    write!(out, "    #[test_case({items}; {name:?})]").expect("write to string never fail");
     out
 }

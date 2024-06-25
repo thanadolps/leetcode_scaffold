@@ -56,7 +56,7 @@ fn create_crate(path: &str, crate_name: &str, crate_code: &str) -> Result<()> {
         .status()?;
 
     // Write cargo.toml
-    let crate_cargo = TEMPLATE_CARGO.trim_start_matches("[dependencies]").trim();
+    let crate_cargo = TEMPLATE_CARGO.trim_start_matches("[dependencies]");
     OpenOptions::new()
         .append(true)
         .open(format!("{path}/Cargo.toml"))?
